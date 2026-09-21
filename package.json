@@ -1,0 +1,20 @@
+{
+  "name": "bus-scale",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "总线刻度 - CAN trace 按采集时点重放与信号解释",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
+  }
+}
