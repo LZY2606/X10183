@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>总线刻度</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>总线刻度</h1>
+      <div class="sub">CAN trace × 版本化 DBC 重放与信号解释</div>
+      <div class="controls">
+        <label>DBC 视图：
+          <select id="versionSelect"></select>
+        </label>
+        <button id="refreshBtn" class="ghost">刷新</button>
+        <button id="snapshotBtn">冻结调查快照</button>
+      </div>
+    </header>
+    <nav class="tabs" id="tabs">
+      <button data-tab="timeline" class="active">帧时间轴</button>
+      <button data-tab="bits">Bit 布局</button>
+      <button data-tab="curves">信号曲线</button>
+      <button data-tab="counters">计数器缺口</button>
+      <button data-tab="crc">CRC 证据</button>
+      <button data-tab="compare">版本对比 / 迁移</button>
+      <button data-tab="snapshots">调查快照</button>
+    </nav>
+    <main id="main"></main>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>

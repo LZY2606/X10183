@@ -1,0 +1,17 @@
+{
+  "name": "bus-scale",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server-dev.mjs",
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.6",
+    "typescript": "~5.7",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.7"
+  }
+}
