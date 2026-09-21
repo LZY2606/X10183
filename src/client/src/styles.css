@@ -1,0 +1,66 @@
+:root {
+  --bg: #0f1420;
+  --panel: #171e2e;
+  --panel2: #1e2740;
+  --line: #2b3654;
+  --text: #e6ebf5;
+  --muted: #8a97b8;
+  --accent: #5aa7ff;
+  --green: #4ecb71;
+  --amber: #f0b452;
+  --red: #f06b6b;
+  --purple: #b18cf0;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", Segoe UI, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+.topbar { display: flex; align-items: baseline; gap: 14px; padding: 14px 22px; border-bottom: 1px solid var(--line); background: var(--panel); }
+.topbar h1 { margin: 0; font-size: 22px; letter-spacing: 2px; }
+.subtitle { color: var(--muted); font-size: 13px; }
+.badge { margin-left: auto; font-size: 12px; color: var(--green); }
+.tabs { display: flex; gap: 4px; padding: 8px 16px 0; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.tabs button { background: none; border: 1px solid transparent; border-bottom: none; color: var(--muted); padding: 8px 14px; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 14px; }
+.tabs button.active { background: var(--bg); color: var(--text); border-color: var(--line); }
+main { padding: 18px 22px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.panel h2 { margin: 0 0 12px; font-size: 16px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; }
+tr.clickable { cursor: pointer; }
+tr.clickable:hover { background: var(--panel2); }
+.tag { display: inline-block; padding: 1px 7px; border-radius: 10px; font-size: 11px; }
+.tag.std { background: #244; color: #8ce0c0; }
+.tag.ext { background: #432a55; color: #d3a8f0; }
+.tag.ok { background: #1f3d2b; color: var(--green); }
+.tag.bad { background: #43232a; color: var(--red); }
+.tag.warn { background: #45371f; color: var(--amber); }
+.tag.muted { background: var(--panel2); color: var(--muted); }
+.mono { font-family: ui-monospace, Menlo, monospace; }
+.scroll { max-height: 420px; overflow: auto; }
+.bitmap { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; margin-top: 10px; }
+.bytecell { border: 1px solid var(--line); border-radius: 6px; padding: 6px; background: var(--panel2); min-height: 92px; }
+.bytecell h4 { margin: 0 0 4px; font-size: 11px; color: var(--muted); }
+.bit { display: flex; justify-content: space-between; font-size: 10px; font-family: ui-monospace, Menlo, monospace; padding: 1px 2px; border-radius: 3px; }
+.bit.on { background: rgba(90,167,255,.28); }
+.sig-chip { font-size: 10.5px; padding: 2px 6px; border-radius: 8px; margin: 2px 3px 0 0; display: inline-block; }
+canvas { width: 100%; height: 220px; background: var(--panel2); border-radius: 8px; }
+input, select, textarea, button { font: inherit; }
+input, select, textarea { background: var(--panel2); border: 1px solid var(--line); color: var(--text); border-radius: 6px; padding: 6px 8px; }
+button.action { background: var(--accent); color: #08111f; border: none; border-radius: 6px; padding: 7px 14px; cursor: pointer; font-weight: 600; }
+button.ghost { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+textarea { width: 100%; min-height: 150px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+.legend { font-size: 12px; color: var(--muted); }
+.stale { color: var(--amber); font-weight: 600; }
+details { margin-top: 8px; }
+summary { cursor: pointer; color: var(--accent); font-size: 13px; }
+.kv { display: grid; grid-template-columns: 160px 1fr; gap: 2px 12px; font-size: 12.5px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-family: ui-monospace, Menlo, monospace; }
+.small { font-size: 12px; color: var(--muted); }
+.timeline-wrap { position: relative; height: 170px; background: var(--panel2); border-radius: 8px; overflow: hidden; }
+.tl-row { position: absolute; left: 0; right: 0; height: 22px; }
+.tl-dot { position: absolute; width: 10px; height: 10px; border-radius: 50%; top: 6px; cursor: pointer; transform: translateX(-50%); }
+.tl-dot.sel { outline: 2px solid #fff; }
+.tl-band { position: absolute; top: 0; bottom: 0; opacity: .12; }
